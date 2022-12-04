@@ -17,14 +17,27 @@ const day4 = () => {
     const elfPair = split[i];
     const firstElf = elfPair[0];
     const secondElf = elfPair[1];
+    //part1
+    // if (
+    //   parseInt(firstElf[0]) <= parseInt(secondElf[0]) &&
+    //   parseInt(firstElf[1]) >= parseInt(secondElf[1])
+    // ) {
+    //   crossOver++;
+    // } else if (
+    //   parseInt(firstElf[0]) >= parseInt(secondElf[0]) &&
+    //   parseInt(firstElf[1]) <= parseInt(secondElf[1])
+    // ) {
+    //   crossOver++;
+    // }
+    //part 2
     if (
       parseInt(firstElf[0]) <= parseInt(secondElf[0]) &&
-      parseInt(firstElf[1]) >= parseInt(secondElf[1])
+      parseInt(firstElf[1]) >= parseInt(secondElf[0])
     ) {
       crossOver++;
     } else if (
-      parseInt(firstElf[0]) >= parseInt(secondElf[0]) &&
-      parseInt(firstElf[1]) <= parseInt(secondElf[1])
+      parseInt(secondElf[0]) <= parseInt(firstElf[0]) &&
+      parseInt(secondElf[1]) >= parseInt(firstElf[0])
     ) {
       crossOver++;
     }
